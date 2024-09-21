@@ -143,17 +143,20 @@ int main()
 	setlocale(LC_ALL, "Portuguese");
 	int opcao=0; //Definindo variáveis
 	int laco=1;
-	char senhadigitada[10]="a";
+	char senhadigitada[]="a";
+	int comparacao; 
 	
 	printf("### Cartório da EBAC ###\n\n");
 	printf("Login de administrador!\n\nDigite sua senha: ");
 	scanf("%s",senhadigitada);
 	
+	comparacao = strcmp(senhadigitada, "admin");
 	
-	if(senhadigitada[10]  == "admin")
+	
+	if(comparacao == 0)
 	{
 		
-	
+		system("cls");
 	
 		for(laco=1; laco==1;)
 		{
@@ -208,6 +211,8 @@ int main()
 	
 	else
 		printf("Senha incorreta!");
+		system("pause");
+		
 	
 }
 
